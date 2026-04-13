@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6091d8e48aacbc440aedce066965fa3b, type: 3}
+  m_Name: Item_M4
+  m_EditorClassIdentifier: 
+  itemName: M4
+  icon: {fileID: 21300000, guid: 49e34751179ff8742852e081fae51925, type: 3}
+  description: "\uC548\uC815\uC131\uC774 \uC88B\uC740 \uB3CC\uACA9\uC18C\uCD1D"
+  itemType: 0
+  price: 5000
+  weight: 7
+  armorValue: 0
+  healthBonus: 0
+  weaponData: {fileID: 11400000, guid: dfb226283930c2941b809fc3e1174916, type: 2}
+  ammoType: 0
+  ammoCount: 30
+  healAmount: 0
+  maxUses: 1
