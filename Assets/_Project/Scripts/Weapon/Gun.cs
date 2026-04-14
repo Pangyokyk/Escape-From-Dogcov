@@ -22,6 +22,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private AudioClip reloadSound; // 총 장전소리
     [SerializeField] private AudioClip emptySound;  // 탄약 없을 때
     private AudioSource audioSource;
+    private InventoryUI inventoryUI;
 
     //스탯 (weaponData에서 로드함)
     private float damage;
@@ -101,11 +102,19 @@ public class Gun : MonoBehaviour
         }
 
         // UI열려있을 시 발사불가
-        InventoryUI inventoryUI = FindObjectOfType<InventoryUI>();
+        if(inventoryUI == null)
+        {
+            inventoryUI = FindObjectOfType<InventoryUI>();
+        }
+
+        if (inventoryUI != null && inventoryUI.IsOpen())
+            return;
+        
+        /*InventoryUI inventoryUI = FindObjectOfType<InventoryUI>();
         if(inventoryUI != null && inventoryUI.IsOpen())
         {
             return;
-        }
+        }*/
 
         // 마우스 왼쪽 버튼 누르고 있으면 발사
         if (inputActions.Player.Fire.IsPressed() && Time.time >= nextFireTime)
